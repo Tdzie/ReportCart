@@ -153,10 +153,20 @@
         */
  
         //Add the data rows from Excel file.
+
+
+
+
+
+        // wait till all ezscans are counted and add then to the 2nd from last page
         for (var i = 8; i < excelRows.length; i++) {
             if(i == excelRows.length-1){
                 ezScanAdd();
             }
+
+
+
+
             /*
             //Add the data row.
             var row = table.insertRow(-1);
@@ -231,7 +241,10 @@
             cell = row.insertCell(-1);
             cell.innerHTML = excelRows[i].__EMPTY_21;
 	*/
+
+    // start the main function
 	    runner(excelRows[i]);
+        
         }
         
         
@@ -266,6 +279,7 @@
     var seafoodC = 0;
     var seafoodV = 0;
 
+    // function to add combined numbers and create page
    function ezScanAdd(){
        arr = [{
         __EMPTY: "EZ",
@@ -295,12 +309,17 @@
    ];
     console.log(arr);
    runner(arr[0]);
+   listOfName(topTen);
    }
 
 //make a array for top 10
  var topTen = [];
+
+ // main function to create cards
     function runner(a){	
     var testd = document.getElementById("test");
+
+    // join ez scan reports into a single page
     if(a.__EMPTY == "--"){
 
         allC += parseFloat(a.__EMPTY_2);
@@ -324,7 +343,7 @@
         seafoodC += parseFloat(a.__EMPTY_20);
         seafoodV += parseFloat(a.__EMPTY_21);
     }else{
-        
+        // adding information to top ten array
     let name = a.__EMPTY;
     let namel = a.__EMPTY_1;
     let totalC = a.__EMPTY_2;
@@ -332,6 +351,8 @@
     let tempTopTen ={"name": name, "lname": namel, "count": totalC, "value": totalV};
 
     topTen.push(tempTopTen);
+
+
 
     var di = document.createElement("div");
     di.classList.add("border");	
@@ -610,7 +631,7 @@ if(a.__EMPTY_20 > 0){
     
 
 
-
+// store total and top ten based on count
 
 if(a.__EMPTY == null){
     topTen.sort((a, b) => parseFloat(b.count) - parseFloat(a.count));
@@ -625,11 +646,33 @@ var oo = document.createElement("li");
 
     for(var j = 1; j <= 10; j++){
     oo = document.createElement("li");
-    oo.innerHTML = topTen[j].name + " " + topTen[j].lname + "____Count: " + topTen[j].count + "___Value: $" + topTen[j].value;
+    oo.setAttribute("id", "iList");
+    oo.classList.add("lItem");
     yy.appendChild(oo);
+
+    var jj = document.getElementById("iList");
+    oo = document.createElement("div");
+    oo.classList.add("tenDivLeft");
+   
+    oo.innerHTML = j + ": " + topTen[j].name + " " + topTen[j].lname;
+    jj.appendChild(oo);
+
+
+        oo = document.createElement("div");
+        oo.classList.add("tenDivRight");
+
+        oo.innerHTML = "Count: " + topTen[j].count + "___Value: $" + topTen[j].value;
+
+        jj.appendChild(oo);
+
+    oo = document.getElementById("iList");
+    oo.removeAttribute('id');
+    
     }
 
 }else {
+
+    // insert useful information
 var kk = document.createElement("ul");
     kk.setAttribute("id", "oList");
     kk.classList.add("ol");
@@ -672,7 +715,44 @@ var oo = document.createElement("li");
         
     }
 
+function listOfName(a) {
+    let topTen = a;
+    topTen.sort((a, b) => parseFloat(b.value) - parseFloat(a.value));
+    console.log(topTen);
+    var testd = document.getElementById("test");
+    var tt = document.createElement('ol');
+    tt.classList.add("listOfNames");
+    tt.setAttribute('id', 'list');
+    testd.appendChild(tt);
+    var list = document.getElementById("list");
 
+    for(var j = 0; j < topTen.length; j++){
+        let a = j + 1;
+        oo = document.createElement("li");
+        oo.setAttribute("id", "iList");
+        oo.classList.add("lItem");
+        list.appendChild(oo);
+
+        var jj = document.getElementById("iList");
+        oo = document.createElement("div");
+        oo.classList.add("tenDivLeft");
+
+        oo.innerHTML = a + ": " + topTen[j].name + " " + topTen[j].lname;
+        jj.appendChild(oo);
+
+
+        oo = document.createElement("div");
+        oo.classList.add("tenDivRight");
+
+        oo.innerHTML = "Count: " + topTen[j].count + "___Value: $" + topTen[j].value;
+
+        jj.appendChild(oo);
+
+        oo = document.getElementById("iList");
+        oo.removeAttribute('id');
+    }
+
+}
 
 </script>
 </head>
@@ -691,9 +771,21 @@ var oo = document.createElement("li");
 <div id="test"></div>
 </body>
 <style>
+
+ 
+@media print {
+           #upload1, #dvExcel1, #fileUpload1{
+               display: none;
+           }
+}
     div#dvExcel1 {
 	page-break-after: always;
 	}	
+
+    .listOfNames {
+        page-break-after: always;
+
+    }
 
     .border {
         width: 950px;
@@ -734,6 +826,9 @@ var oo = document.createElement("li");
         text-align: left;
         padding-left: 4px;
     }
+    ol {
+        width: 750px;
+    }
 
     li {
         font-size: 1.8em;
@@ -748,6 +843,13 @@ var oo = document.createElement("li");
     #text {
         background-color: gray;
     }
+
+    .lItem {
+        display: flex;
+        justify-content: space-between;
+    }
 </style>
 </html>
+
+
 
