@@ -1,7 +1,3 @@
-// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
 
 
 var _arrForCashiers;
@@ -183,7 +179,7 @@ function runner(a) {
         var nn = document.getElementById("inwrap");
         // count
         di = document.createElement("div");
-        if (a.__EMPTY == null) {
+        if (a.__EMPTY_1 == "Sum") {
             di.innerHTML = "STORE TOTAL";
         }
         else {
@@ -212,33 +208,37 @@ function runner(a) {
             if (a.__EMPTY_5 > 0)
                 addSquaresForDepartments("HBC", a.__EMPTY_5)
 
-            // Add the Bakery Value
-            if (a.__EMPTY_6 > 0)
-                addSquaresForDepartments("Bakery", a.__EMPTY_6)
-
-            // Add the Deli/Food Service Value
-            if (a.__EMPTY_7 > 0)
-                addSquaresForDepartments("Deli/FS", a.__EMPTY_7)
-
-            // Add the Floral Value
-            if (a.__EMPTY_8 > 0)
-                addSquaresForDepartments("Floral", a.__EMPTY_8)
-
             // Add the Meat Value
-            if (a.__EMPTY_9 > 0)
-                addSquaresForDepartments("Meat", a.__EMPTY_9)
+            if (a.__EMPTY_6 > 0)
+                addSquaresForDepartments("Meat", a.__EMPTY_6)
+
+            // Add the Seafood Service Value
+            if (a.__EMPTY_7 > 0)
+                addSquaresForDepartments("Seafood", a.__EMPTY_7)
+
+            // Add the Deli/Food service Value
+            if (a.__EMPTY_8 > 0)
+                addSquaresForDepartments("Deli/FS", a.__EMPTY_8)
 
             // Add the Produce Value
-            if (a.__EMPTY_10 > 0)
-                addSquaresForDepartments("Produce", a.__EMPTY_10)
+            if (a.__EMPTY_9 > 0)
+                addSquaresForDepartments("Produce", a.__EMPTY_9)
 
-            // Add the Seafood Value
+            // Add the Bakery Value
+            if (a.__EMPTY_10 > 0)
+                addSquaresForDepartments("Bakery", a.__EMPTY_10)
+
+            // Add the Kosher Value
             if (a.__EMPTY_11 > 0)
-                addSquaresForDepartments("Seafood", a.__EMPTY_11)
+                addSquaresForDepartments("Kosher", a.__EMPTY_11)
+
+            // Add the Floral Value
+            if (a.__EMPTY_12 > 0)
+                addSquaresForDepartments("Floral", a.__EMPTY_12)
 
             // Add the Beer/Wine Value
-            if (a.__EMPTY_12 > 0)
-                addSquaresForDepartments("Beer/Wine", a.__EMPTY_12)
+            if (a.__EMPTY_13 > 0)
+                addSquaresForDepartments("Beer/Wine", a.__EMPTY_13)
 
             //create useful information
 
@@ -252,7 +252,7 @@ function runner(a) {
 
             // store total and top ten based on count
 
-            if (a.__EMPTY == null) {
+            if (a.__EMPTY_1 == "Sum") {
                 topTen.sort((a, b) => parseFloat(b.count) - parseFloat(a.count));
                 var kk = document.createElement("ol");
                 kk.setAttribute("id", "oList");
