@@ -179,7 +179,7 @@ function runner(a) {
         var nn = document.getElementById("inwrap");
         // count
         di = document.createElement("div");
-        if (a.__EMPTY_1 == "Sum") {
+        if (a["Report Name:"] == "Sum") {
             di.innerHTML = "STORE TOTAL";
         }
         else {
@@ -252,7 +252,7 @@ function runner(a) {
 
             // store total and top ten based on count
 
-            if (a.__EMPTY_1 == "Sum") {
+            if (a["Report Name:"] == "Sum") {
                 topTen.sort((a, b) => parseFloat(b.count) - parseFloat(a.count));
                 var kk = document.createElement("ol");
                 kk.setAttribute("id", "oList");
