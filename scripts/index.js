@@ -16,6 +16,7 @@ var floralV = 0;
 var meatV = 0;
 var produceV = 0;
 var seafoodV = 0;
+var kosherV = 0;
 
 //make a array for top 10
 var topTen = [];
@@ -96,13 +97,13 @@ function ezScanAdd() {
         __EMPTY_3: groceryV.toFixed(2),
         __EMPTY_4: gmV.toFixed(2),
         __EMPTY_5: hbcV.toFixed(2),
-        __EMPTY_6: bakeryV.toFixed(2),
-        __EMPTY_7: beerV.toFixed(2),
+        __EMPTY_6: meatV.toFixed(2),
+        __EMPTY_7: seafoodV.toFixed(2),
         __EMPTY_8: deliV.toFixed(2),
-        __EMPTY_9: floralV.toFixed(2),
-        __EMPTY_10: meatV.toFixed(2),
-        __EMPTY_11: produceV.toFixed(2),
-        __EMPTY_12: seafoodV.toFixed(2),
+        __EMPTY_9: produceV.toFixed(2),
+        __EMPTY_10: bakeryV.toFixed(2),
+        __EMPTY_11: kosherV.toFixed(2),
+        __EMPTY_12: beerV.toFixed(2),
     }
 
     ];
