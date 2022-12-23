@@ -118,13 +118,14 @@ function addEasyScanNumbers(cashierArr) {
     groceryV += parseFloat(cashierArr.__EMPTY_3);
     gmV += parseFloat(cashierArr.__EMPTY_4);
     hbcV += parseFloat(cashierArr.__EMPTY_5)
-    bakeryV += parseFloat(cashierArr.__EMPTY_6);
-    deliV += parseFloat(cashierArr.__EMPTY_7);
-    floralV += parseFloat(cashierArr.__EMPTY_8);
-    meatV += parseFloat(cashierArr.__EMPTY_9);
-    produceV += parseFloat(cashierArr.__EMPTY_10);
-    seafoodV += parseFloat(cashierArr.__EMPTY_11);
-    beerV += parseFloat(cashierArr.__EMPTY_12);
+    meatV += parseFloat(cashierArr.__EMPTY_6);
+    seafoodV += parseFloat(cashierArr.__EMPTY_7);
+    deliV += parseFloat(cashierArr.__EMPTY_8);
+    produceV += parseFloat(cashierArr.__EMPTY_9);
+    bakeryV += parseFloat(cashierArr.__EMPTY_10);
+    kosherV += parseFloat(cashierArr.__EMPTY_11);
+    floralV += parseFloat(cashierArr.__EMPTY_12);
+    beerV += parseFloat(cashierArr.__EMPTY_13);
 };
 
 function addCasherToTopTen(cashierArr) {
