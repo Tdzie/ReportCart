@@ -275,7 +275,7 @@ function runner(a) {
                 if (_arrForCashiers == null) {
                     Upload();
                 }
-                for (var j = 1; j <= 10; j++) {
+                for (var j = 0; j <= 10; j++) {
                     oo = document.createElement("li");
                     oo.setAttribute("id", "iList");
                     oo.classList.add("lItem");
@@ -285,7 +285,7 @@ function runner(a) {
                     oo = document.createElement("div");
                     oo.classList.add("tenDivLeft");
 
-                    oo.innerHTML = j + ": " + topTen[j].name + " " + topTen[j].lname;
+                    oo.innerHTML = j + 1 + ": " + topTen[j].name + " " + topTen[j].lname;
                     jj.appendChild(oo);
 
 
