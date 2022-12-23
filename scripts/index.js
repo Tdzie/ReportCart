@@ -406,7 +406,7 @@ function runAll() {
 
 
 function kjvkh() {
-    document.getElementById('fileUploadDiv2').style.backgroundColor = "lightgreen";
+    document.querySelector("#fileUploadDiv2").style.backgroundColor = "lightgreen";
     var tt = document.getElementById('dvExcel');
     tt.innerText = "Press Start.";
 
