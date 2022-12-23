@@ -103,11 +103,12 @@ function ezScanAdd() {
         __EMPTY_9: produceV.toFixed(2),
         __EMPTY_10: bakeryV.toFixed(2),
         __EMPTY_11: kosherV.toFixed(2),
-        __EMPTY_12: beerV.toFixed(2),
+        __EMPTY_12: floralV.toFixed(2),
+        __EMPTY_13: beerV.toFixed(2)
     }
 
     ];
-    // console.log(arr);
+    console.log(arr[0]);
     runner(arr[0]);
     listOfName(topTen);
 }
@@ -195,7 +196,7 @@ function runner(a) {
 
 
             //Add the ALL value
-            addSquaresForDepartments("All", a.__EMPTY)
+            addSquaresForDepartments("Total", a.__EMPTY)
 
             //Add the GROCERY value
             if (a.__EMPTY_3 > 0)
@@ -243,10 +244,10 @@ function runner(a) {
 
             //create useful information
 
-            var hh = document.createElement("h1");
-            hh.classList.add("headerinfo");
-            hh.textContent = "Useful Information"
-            add.appendChild(hh);
+           // var hh = document.createElement("h1");
+           // hh.classList.add("headerinfo");
+           // hh.textContent = "Useful Information"
+           // add.appendChild(hh);
 
 
 
@@ -254,6 +255,13 @@ function runner(a) {
             // store total and top ten based on count
 
             if (a["Report Name:"] == "Sum") {
+
+                var hh = document.createElement("h1");
+                hh.classList.add("headerinfo");
+                hh.textContent = "Top Ten"
+                add.appendChild(hh);
+    
+
                 topTen.sort((a, b) => parseFloat(b.count) - parseFloat(a.count));
                 var kk = document.createElement("ol");
                 kk.setAttribute("id", "oList");
@@ -293,6 +301,12 @@ function runner(a) {
                 }
 
             } else {
+
+                var hh = document.createElement("h1");
+                hh.classList.add("headerinfo");
+                hh.textContent = "Useful Information"
+                add.appendChild(hh);
+    
 
                 // insert useful information
                 var kk = document.createElement("ul");
@@ -389,9 +403,10 @@ function runAll() {
 
 }
 
+document.getElementById(fileUpload).onchange = function(){document.getElementById('fileUploadDiv2').style.backgroundColor = "lightgreen";};
 
 function kjvkh() {
-    document.getElementById('fileUploadDiv1').style.backgroundColor = "lightgreen";
+
     var tt = document.getElementById('dvExcel');
 
     if (fileUpload.files.length == 0) {
