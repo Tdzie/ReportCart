@@ -275,7 +275,7 @@ function runner(a) {
                 if (_arrForCashiers == null) {
                     Upload();
                 }
-                for (var j = 0; j <= 10; j++) {
+                for (var j = 0; j <= 9; j++) {
                     oo = document.createElement("li");
                     oo.setAttribute("id", "iList");
                     oo.classList.add("lItem");
