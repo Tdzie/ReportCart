@@ -108,7 +108,7 @@ function ezScanAdd() {
     }
 
     ];
-    console.log(arr[0]);
+    console.log(arr);
     runner(arr[0]);
     listOfName(topTen);
 }
@@ -403,20 +403,12 @@ function runAll() {
 
 }
 
-document.getElementById(fileUpload).onchange = function(){document.getElementById('fileUploadDiv2').style.backgroundColor = "lightgreen";};
+
 
 function kjvkh() {
-
+    document.getElementById('fileUploadDiv2').style.backgroundColor = "lightgreen";
     var tt = document.getElementById('dvExcel');
-
-    if (fileUpload.files.length == 0) {
-        tt.innerText = "Please upload Cashier Keyed Entry Excel file.";
-    } else {
-
-
-        tt.innerText = "Press Start.";
-    }
-
+    tt.innerText = "Press Start.";
 
 }
 
