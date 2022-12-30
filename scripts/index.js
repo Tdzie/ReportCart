@@ -312,7 +312,7 @@ function runner(a) {
                 // insert useful information
                 var kk = document.createElement("a");
                 kk.setAttribute("id", "aImage");
-                kk.innerHTML += '<img src="/KeyInHelper.jpg">';
+                kk.innerHTML += '<img src="images/KeyInHelper.jpg">';
                 add.appendChild(kk);
                
             }
