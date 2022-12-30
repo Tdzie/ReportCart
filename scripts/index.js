@@ -310,40 +310,14 @@ function runner(a) {
     
 
                 // insert useful information
-                var kk = document.createElement("ul");
-                kk.setAttribute("id", "oList");
-                kk.classList.add("ol");
-                kk.classList.add("text-left");
+                var kk = document.createElement("a");
+                kk.setAttribute("id", "aImage");
+                kk.innerHTML += '<img src="/KeyInHelper.jpg">';
                 add.appendChild(kk);
-                var yy = document.getElementById("oList");
-
-                var oo = document.createElement("li");
-                oo.classList.add("text-left");
-                oo.textContent = "Never void a product and key enter it into a department to change the price. Please call a supervisor.";
-                yy.appendChild(oo);
-
-                oo = document.createElement("li");
-                oo.classList.add("text-left");
-                oo.textContent = "Typically, when entering a CLU, you type the ten digits in the center of the label; if you get an error, try including the first digit on the tag (7-41735-01528)";
-                yy.appendChild(oo);
-
-                oo = document.createElement("li");
-                oo.classList.add("text-left");
-                oo.textContent = "When entering a label from the Meat, Seafood, Deli, or Food Service department, you must drop the last digit. (741735-204999) <-- Will give an error. The last digit '9' in this example is removed. (741735-20499) <-- Correct.";
-                yy.appendChild(oo);
-
-                oo = document.createElement("li");
-                oo.classList.add("text-left");
-                oo.textContent = "Meat, Seafood, Deli, and Food Service items over $100 will not print a barcode. If it is a Meat department product, it will have a 3-digit PLU at the end of the description. 'CAB roast (684)'. Enter in the PLU and then the price on the label. Please call a supervisor for help entering a Seafood, Deli, or Food Service product over $100.";
-                yy.appendChild(oo);
-
-                oo = document.createElement("li");
-                oo.classList.add("text-left");
-                oo.textContent = "If your item scans and a not on file error is displayed, press the Department key on the right, choose the department it belongs to, and enter the item's price.";
-                yy.appendChild(oo);
+               
             }
 
-            yy.setAttribute("id", "nothing");
+            //yy.setAttribute("id", "nothing");
             add.setAttribute("id", "nothing");
 
         }
