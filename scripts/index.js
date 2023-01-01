@@ -303,21 +303,7 @@ function runner(a) {
 
             } else {
 
-                var hh = document.createElement("h1");
-                hh.classList.add("headerinfo");
-                hh.innerHTML += "<div class="container text-center">
-  <div class="row row-cols-3">
-    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
-    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
-    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
-    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
-<div class="col"> <img src="images/KeyInHelper.jpg"> </div>
-<div class="col"> <img src="images/KeyInHelper.jpg"> </div>
-
-
-  </div>
-</div>";
-                add.appendChild(hh);
+             
     
 
                 // insert useful information
