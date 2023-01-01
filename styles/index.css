@@ -133,3 +133,7 @@ h1 {
     display: flex;
     justify-content: space-between;
 }
+
+#containerDiv {
+     width: 100%;
+}
