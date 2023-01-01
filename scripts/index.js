@@ -305,15 +305,26 @@ function runner(a) {
 
                 var hh = document.createElement("h1");
                 hh.classList.add("headerinfo");
-                hh.textContent = "Useful Information"
+                hh.innerHTML += "<div class="container text-center">
+  <div class="row row-cols-3">
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+<div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+<div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+
+
+  </div>
+</div>";
                 add.appendChild(hh);
     
 
                 // insert useful information
-                var kk = document.createElement("a");
-                kk.setAttribute("id", "aImage");
-                kk.innerHTML += '<img src="images/KeyInHelper.jpg">';
-                add.appendChild(kk);
+               // var kk = document.createElement("a");
+               // kk.setAttribute("id", "aImage");
+                // kk.innerHTML += '<img src="images/KeyInHelper.jpg">';
+               // add.appendChild(kk);
                
             }
 
