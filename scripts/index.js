@@ -308,7 +308,8 @@ function runner(a) {
 
                 // insert useful information
                var kk = document.createElement("div");
-               Kk.innerHTML += "<div class="container text-center">
+               kk.innerHTML += 
+"<div class="container text-center">
   <div class="row row-cols-3">
     <div class="col">Column 1</div>
     <div class="col">Column 2</div>
