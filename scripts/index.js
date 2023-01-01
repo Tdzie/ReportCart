@@ -312,12 +312,12 @@ function runner(a) {
                kk.innerHTML += 
 `<div class="container text-center">
   <div class="row row-cols-3">
-    <div class="col">Column 1</div>
-    <div class="col">Column 2</div>
-    <div class="col">Column 3</div>
-    <div class="col">Column 4</div>
-    <div class="col">Column 5</div>
-    <div class="col">Column 6</div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"></div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
+    <div class="col"> <img src="images/KeyInHelper.jpg"> </div>
   </div>
 </div>`;
                // kk.setAttribute("id", "aImage");
