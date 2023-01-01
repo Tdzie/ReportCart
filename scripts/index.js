@@ -309,7 +309,7 @@ function runner(a) {
                 // insert useful information
                var kk = document.createElement("div");
                kk.innerHTML += 
-'<div class="container text-center">
+`<div class="container text-center">
   <div class="row row-cols-3">
     <div class="col">Column 1</div>
     <div class="col">Column 2</div>
@@ -318,7 +318,7 @@ function runner(a) {
     <div class="col">Column 5</div>
     <div class="col">Column 6</div>
   </div>
-</div>';
+</div>`;
                // kk.setAttribute("id", "aImage");
                 // kk.innerHTML += '<img src="images/KeyInHelper.jpg">';
                add.appendChild(kk);
