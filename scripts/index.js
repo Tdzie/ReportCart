@@ -379,7 +379,7 @@ function listOfName(a) {
 function runAll() {
     setTimeout(function () {
         Upload();
-    }, 200);
+    }, 1000);
 }
 
 
