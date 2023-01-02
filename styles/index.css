@@ -73,8 +73,10 @@ div#dvExcel1 {
 }
 
 .border {
-    width: 950px;
-    height: 1200px;
+    max-width: 950px;
+    
+    max-height: 1200px;
+
     border: 2px solid black;
     page-break-after: always;
     display: flex;
@@ -86,8 +88,9 @@ div#dvExcel1 {
 
 
 .inboxdiv {
-    width: 150px;
-    height: 100px;
+    max-width: 150px;
+    max-height: 100px;
+
     border: 1px solid black;
     text-align: center;
     font-size: 1.3em;
@@ -98,7 +101,7 @@ div#dvExcel1 {
 
 .inboxhead {
     width: 100%;
-    height: 100px;
+    max-height: 100px;
     border: 1px solid black;
     font-size: 3.5em;
     text-align: center;
@@ -111,7 +114,7 @@ div#dvExcel1 {
 }
 
 ol {
-    width: 750px;
+    max-width: 750px;
 }
 
 li {
