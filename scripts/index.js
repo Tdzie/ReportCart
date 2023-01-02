@@ -377,14 +377,9 @@ function listOfName(a) {
 // function to run both uploads with a single button
 
 function runAll() {
-    // Upload();
-    var tt = document.getElementById('dvExcel');
-    tt.innerText = "Please wait while your file loads";
     setTimeout(function () {
         Upload();
-        tt.innerText = "Complete";
-    }, 1000);
-
+    }, 200);
 }
 
 
